@@ -27,6 +27,14 @@ public class CarroCorrida {
     }
 
     public boolean getLigado(){return ligado;}
+
+    public String ligadoStr(boolean ligado){
+        if(ligado){
+            return "ligado";
+        } else {
+            return "desligado";
+        }
+    }
     public void setLigado(boolean ligado){this.ligado = ligado;}
 
     public Piloto getPiloto(){return piloto;}
@@ -56,5 +64,14 @@ public class CarroCorrida {
         if(velocidadeAtual == 0){
             carro.setLigado(false);
         }
+    }
+
+    @Override
+    public String toString() {
+        return  "Carro do " + piloto.getPiloto() +
+                ": numero do carro = " + numeroCarro +
+                ", velocidade maxima = " + velocidadeMaxima +
+                ", velocidade Atual = " + velocidadeAtual +
+                ", ligado = " + ligadoStr(ligado);
     }
 }

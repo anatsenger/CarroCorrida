@@ -2,7 +2,8 @@ public class Piloto {
     public static void main(String[] args) {
         Piloto Jackson = new Piloto("Jackson", 24, Sexo.Masculino, "Skol");
         CarroCorrida marea = new CarroCorrida(001, Jackson, 200, 0, true);
-
+        System.out.println(Jackson);
+        System.out.println(marea);
     }
     private String piloto;
     private Integer idade;
@@ -27,6 +28,12 @@ public class Piloto {
     public String getEquipe(){return equipe;}
     public void setEquipe(String equipe){this.equipe = equipe;}
 
-
-
+    @Override
+    public String toString() {
+        return  "Piloto = " + piloto + '\'' +
+                ", idade = " + idade +
+                ", sexo = " + sexo +
+                ", equipe = " + equipe + '\'' +
+                '}';
+    }
 }
