@@ -4,6 +4,11 @@ public class Piloto {
         CarroCorrida marea = new CarroCorrida(001, Jackson, 200, 0, true);
         System.out.println(Jackson);
         System.out.println(marea);
+        marea.acelera(20.0f, marea);
+        marea.freia(5.0f, marea);
+        marea.parar(marea);
+        marea.desligar(marea, marea.getLigado(), marea.getVelocidadeAtual());
+        marea.ligar(marea, marea.getLigado());
     }
     private String piloto;
     private Integer idade;
